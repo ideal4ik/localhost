@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->default('Тест');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
-            $table->string('img', 1024)->default('/public/images/fZfZ4zRgd1EBlEiq.jpg');
+            $table->string('img', 1024)->default('/public/images/fZfZ4zRgd1EBlEiq.jpg')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

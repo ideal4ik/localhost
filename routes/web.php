@@ -66,3 +66,13 @@ Route::get('/dashboard', [TestController::class, 'index'])->name('dashboard');
 Route::get('/dashboard/{id}', [TestController::class, 'getQuestionsForTest'])->name('dashboardid');
 
 Route::post('/dashboard/{id}', [TestController::class, 'saveResult'])->name('test.save-result');
+
+Route::get('/mytests', [TestController::class, 'index2'])->name('test.mytests');
+
+//CRUD
+Route::get('/test/create', [TestController::class, 'create'])->name('test.create');
+Route::post('/test', [TestController::class, 'store'])->name('test.store');
+Route::get('/test', [TestController::class, 'index'])->name('test.index');
+Route::get('/test/{id}/edit', [TestController::class, 'edit'])->name('test.edit');
+Route::put('/test/{id}', [TestController::class, 'update'])->name('test.update');
+Route::delete('/test/{id}', [TestController::class, 'destroy'])->name('test.destroy');

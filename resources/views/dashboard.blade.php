@@ -26,7 +26,7 @@
                         @foreach ($tests as $test)
                         <a href="dashboard/{{ $test->id }}" class="product">
                             <div class="CatalogItemName">{{ $test->name }}</div>
-                            <div class="CatalogItemImgContainer"><img src="{{ $test->img }}" alt="" class="CatalogItemImg"></div>
+                            <div class="CatalogItemImgContainer"><img src="/public/storage/{{ $test->img }}" alt="{{ $test->name }}" class="mb-2 CatalogItemImg"></div>
                         </a>
                         @endforeach
                     </div>

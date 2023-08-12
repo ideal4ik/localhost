@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('answer_3');
             $table->string('answer_4');
             $table->string('correct_answer');
-            $table->integer('score');
             $table->timestamps();
 
             $table->foreign('test_id')->references('id')->on('tests')->onDelete('cascade');
